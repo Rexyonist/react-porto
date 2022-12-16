@@ -1,5 +1,5 @@
 .nav-bar{
-    background: #181818;
+    background: #f2ecec;
     width: 60px;
     height: 100%;
     position: absolute;
@@ -14,7 +14,7 @@
         img{
             display: block;
             margin: 8px auto;
-            width: 240px;
+            width: 35px;
             height: auto;
 
             &.sub-logo{
@@ -45,77 +45,53 @@
                 transition: all 0.3s ease-out;
             }
 
-            &:hover{
-                color: #ffd700;
+            &:hover {
+                color: #1e1d1c;
 
                 svg{
                     opacity: 0;
-
-                    &:after{
-                        opacity: 1;
-                    }
                 }
 
                 &:after{
-                    content: '';
-                    font-size: 9px;
-                    letter-spacing: 2px;
-                    position: absolute;
-                    bottom: 0;
-                    display: block;
-                    width: 100%;
-                    text-align: center;
-                    opacity: 0;
-                    transition: all 0.3s ease-out;
-                }
-
-                &:first-child{
-                    &::after{
-                        content: 'HOME';
-                    }
+                    opacity: 1;
                 }
             }
 
-            a.about-link{
-                &:after{
-                    content: 'ABOUT';
-                }
+            &:after{
+                content: '';
+                font-size: 9px;
+                letter-spacing: 20px;
+                position: absolute;
+                bottom: 0;
+                display: block;
+                width: 100%;
+                text-align: center;
+                opacity: 0;
+                transition: all 0.3s ease-out;
             }
 
-            a.about-link{
-                &:after{
-                    content: 'CONTACT';
-                }
-            }
-
-            a.active{
-                svg{
-                    color: #ffd700;
+            &:first-child{
+                &::after{
+                    content: 'HOME';
                 }
             }
         }
-    }
 
-    ul{
-        position: absolute;
-        bottom: 20px;
-        width: 100%;
-        display: block;
-        padding: 0;
-        list-style: none;
-        text-align: center;
-        margin: 0;
+        a.about-link{
+            &:after{
+                content: 'ABOUT';
+            }
+        }
 
-        li{
-            a{
-                padding: 7px 0;
-                display: block;
-                font-size: 15px;
-                line-height: 16px;
+        a.contact-link{
+            &:after{
+                content: 'CONTACT';
+            }
+        }
 
-                &:hover svg{
-                    color: #ffd700;
-                }
+        a.active{
+            svg{
+                color: #292927;
             }
         }
     }
