@@ -18,7 +18,6 @@
     "react-loaders": "^3.0.1",
     "react-router-dom": "^6.4.5",
     "react-scripts": "5.0.1",
-    "sass": "^1.56.2",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -44,5 +43,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "sass": "^1.57.1",
+    "sass-loader": "^13.2.0",
+    "webpack": "^5.75.0"
   }
 }

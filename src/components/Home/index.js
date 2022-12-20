@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import Loader from 'react-loaders';
 import { Link } from 'react-router-dom';
 import AnimatedLetters from '../AnimatedLetters';
 import './index.scss'
@@ -16,7 +17,8 @@ const Home = () => {
     },[])
 
     return(
-        <div className="container home-page">
+        <>
+            <div className="container home-page">
             <div className="text-zone">
                 <h1>
                     <span className={letterClass}>H</span>
@@ -36,7 +38,9 @@ const Home = () => {
                 <Link to="/contact" className='flat-button'>CONTACT ME</Link>
             </div>
             <Logo />
-        </div>  
+            </div>
+            <Loader type="pacman" /> 
+        </> 
     );
 }
 export default Home
