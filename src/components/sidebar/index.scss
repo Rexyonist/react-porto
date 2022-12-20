@@ -1,5 +1,5 @@
 .nav-bar{
-    background: #f2ecec;
+    background: #d8d5d5;
     width: 60px;
     height: 100%;
     position: absolute;
@@ -46,7 +46,7 @@
             }
 
             &:hover {
-                color: #1e1d1c;
+                color: #297297;
 
                 svg{
                     opacity: 0;
@@ -60,7 +60,7 @@
             &:after{
                 content: '';
                 font-size: 9px;
-                letter-spacing: 20px;
+                letter-spacing: 2px;
                 position: absolute;
                 bottom: 0;
                 display: block;
@@ -91,8 +91,33 @@
 
         a.active{
             svg{
-                color: #292927;
+                color: #ffd700;
             }
         }
+    }
+
+    ul{
+        position: absolute;
+        bottom: 20px;
+        width: 100%;
+        display: block;
+        padding: 0;
+        list-style: none;
+        text-align: center;
+        margin: 0;
+
+        li{
+            a{
+                padding: 7px 0;
+                display: block;
+                font-size: 15px;
+                line-height: 16px;
+
+                &:hover svg{
+                    color: #ffd700;
+                }
+            }
+        }
+        
     }
 }
