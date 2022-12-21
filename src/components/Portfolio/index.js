@@ -26,7 +26,7 @@ const Portfolio = () => {
                             idx={15}/>
                     </h1>
                     <div>
-                        {renderPortfolio()}
+                        {/* {renderPortfolio()} */}
                     </div>
             </div>
             <Loader type="pacman"/>
