@@ -1,17 +1,40 @@
 import Loader from 'react-loaders'
 import './index.scss'
 import AnimatedLetters from '../AnimatedLetters'
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
+import emailjs from '@emailjs/browser'
 
 const Contact = () => {
 
     const [letterClass, setLetterClass] = useState('text-animate')
+    const form = useRef()
 
     useEffect(() => {
         return setTimeout(() => {
             setLetterClass('text-animate-hover')
         },3000)
     },[])
+
+    const sendEmail = (e) => {
+        e.preventDefault()
+
+        emailjs
+        .sendForm(
+            'service_qn9srvb',
+            'template_4kqsu5o',
+            form.current,
+            '2OZqpsISowHOo9K5p'
+        )
+        .then(
+            () => {
+                alert('Message successfully sent!')
+                window.location.reload(false)
+            },
+            ()=> {
+                alert('Failed to send the message')
+            }
+        )
+    }
 
     return (
         <>
@@ -24,7 +47,7 @@ const Contact = () => {
                         idx={15}/>
                     </h1>
                     <div className='contact-form'>
-                        <form>
+                        <form ref={form} onSubmit={sendEmail}>
                             <ul>
                                 <li className='half'>
                                     <input type="text" name="name" placeholder="Name" required/>
@@ -37,7 +60,8 @@ const Contact = () => {
                                         required/>
                                 </li>
                                 <li>
-                                    <input placeholder="Subject" name="subject" required></input>
+                                    <input placeholder="Subject"
+                                    type="text" name="subject" required></input>
                                 </li>
                                 <li>
                                     <textarea placeholder="Message" name="message" required></textarea>

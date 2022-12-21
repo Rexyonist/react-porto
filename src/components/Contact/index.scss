@@ -17,6 +17,7 @@
             opacity: 0;
             animation: fadeInUp 2s 2s;
             animation-fill-mode: forwards;
+            clear: both;
         }
 
         li.half{
@@ -38,7 +39,7 @@
         background: #115173;
         height: 50px;
         font-size: 16px;
-        color: #fff;
+        color:#fff;
         padding: 0 20px;
         box-sizing: border-box;
     }
@@ -52,7 +53,6 @@
         color: #fff;
         padding: 20px;
         min-height: 150px;
-        box-sizing: border-box;
     }
 
     .flat-button{

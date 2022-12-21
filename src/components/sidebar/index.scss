@@ -89,9 +89,15 @@
             }
         }
 
+        a.portfolio-link{
+            &:after{
+                content: 'PORTFOLIO';
+            }
+        }
+
         a.active{
             svg{
-                color: #ffd700;
+                color: #07497c;
             }
         }
     }
@@ -114,7 +120,7 @@
                 line-height: 16px;
 
                 &:hover svg{
-                    color: #ffd700;
+                    color: #07497c;
                 }
             }
         }
