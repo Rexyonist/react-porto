@@ -1,4 +1,5 @@
 {
+  "homepage": "https://rexyonist.github.io/portfolio",
   "name": "my-portfolio",
   "version": "0.1.0",
   "private": false,
@@ -47,6 +48,7 @@
     ]
   },
   "devDependencies": {
+    "gh-pages": "^4.0.0",
     "sass": "^1.57.1",
     "sass-loader": "^13.2.0"
   }
